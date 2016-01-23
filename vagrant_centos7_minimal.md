@@ -1,19 +1,19 @@
 
 # CentOS 7 (1511) for Vagrant
 
-1. Set up for CentOS 7
+## Set up for CentOS 7
   * new virtualbox
   * disable audio
   * disable usb
 
-2. Install centos7
+## Install centos7
   * language: English
   * DATE and Time: Asia/Tokyo
   * INSTLLATION DESTINATION: ATA VBOX HARDDISK
   * NETWORK and HOST NAME: Ethernet (enpOs3) ON
   * ROOT PASSWORD: vagrant
 
-3. Setup centos7
+## Setup centos7
 ```bash
 # sed -i "s/^.*requiretty/#Defaults requiretty/" /etc/sudoers
 # yum -y install gcc make gcc-c++ kernel-devel-`uname -r` zlib-devel openssl-devel readline-devel sqlite-devel perl wget dkms nfs-utils vim bzip2
@@ -30,4 +30,14 @@
 # mount /dev/cdrom /mnt
 # sh /mnt/VBoxLinuxAdditions.run
 # umount /mnt
+```
+
+## Make Vagrant box
+```bash
+$ vagrant package --base centos7
+$ vagrant box add centos7
+$ vagrant init centos7
+$ vagrant up
+$ vagrant ssh
+$ vagrant halt
 ```
