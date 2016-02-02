@@ -53,9 +53,9 @@ $ vagrant vbguest
 ```
 
 ```
-config.vm.provider "virtualbox" do |vb|
-  vb.gui = true
-  vb.memory = 1024
+Vagrant.configure("2") do |config|
+  config.vbguest.auto_update = true
+  config.vbguest.no_remote = false
 end
 ```
 
@@ -66,4 +66,12 @@ $ sudo yum -y groupinstall "GNOME Desktop"
 $ sudo systemctl set-default graphical.target
 $ systemctl get-default
 graphical.target
+```
+
+
+```
+config.vm.provider "virtualbox" do |vb|
+  vb.gui = true
+  vb.memory = 1024
+end
 ```
