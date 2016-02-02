@@ -18,8 +18,8 @@
 # sed -i "s/^.*requiretty/#Defaults requiretty/" /etc/sudoers
 # yum -y install gcc make gcc-c++ kernel-devel-`uname -r` zlib-devel openssl-devel readline-devel sqlite-devel perl wget dkms nfs-utils vim bzip2
 # echo "UseDNS no" >> /etc/ssh/sshd_config
-# /user/sbin/groupadd vagrant
-# /user/sbin/useradd vagrant -g vagrant -G wheel
+# /usr/sbin/groupadd vagrant
+# /usr/sbin/useradd vagrant -g vagrant -G wheel
 # echo "vagrant"|passwd --stdin vagrant
 # echo "vagrant        ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers.d/vagrant
 # chmod 0440 /etc/sudoers.d/vagrant
