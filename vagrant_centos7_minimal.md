@@ -34,9 +34,11 @@
 
 ## Make Vagrant box
 ```bash
-$ vagrant --base centos7 --output centos7
-$ vagrant box add centos7
-$ vagrant init centos7
+$ vagrant --base centos7 --output centos7minimal.box
+$ vagrant box add centos7minimal centos7minimal.box
+$ mkdir centos7minimal
+$ cd centos7minimal
+$ vagrant init centos7minimal
 $ vagrant up
 $ vagrant ssh
 $ vagrant halt
@@ -50,4 +52,11 @@ $ vagrant plugin install vagrant-vbguest
 $ vagrant vbguest
 ```
 
+## Desktop
 
+```bash
+$ sudo yum -y groupinstall "GNOME Desktop" 
+$ sudo systemctl set-default graphical.target
+$ systemctl get-default
+graphical.target
+```
