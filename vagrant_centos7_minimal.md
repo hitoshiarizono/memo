@@ -41,3 +41,12 @@ $ vagrant up
 $ vagrant ssh
 $ vagrant halt
 ```
+
+## Update Guest Additions
+
+```bash
+$ vagrant plugin install vagrant-vbguest
+$ vagrant vbguest
+```
+
+
