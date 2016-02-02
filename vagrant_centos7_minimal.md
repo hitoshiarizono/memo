@@ -34,7 +34,7 @@
 
 ## Make Vagrant box
 ```bash
-$ vagrant package --base centos7
+$ vagrant --base centos7 --output centos7
 $ vagrant box add centos7
 $ vagrant init centos7
 $ vagrant up
@@ -45,6 +45,7 @@ $ vagrant halt
 ## Update Guest Additions
 
 ```bash
+$ vagrant plugin list
 $ vagrant plugin install vagrant-vbguest
 $ vagrant vbguest
 ```
