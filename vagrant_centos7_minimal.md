@@ -52,6 +52,13 @@ $ vagrant plugin install vagrant-vbguest
 $ vagrant vbguest
 ```
 
+```
+config.vm.provider "virtualbox" do |vb|
+  vb.gui = true
+  vb.memory = 1024
+end
+```
+
 ## Desktop
 
 ```bash
