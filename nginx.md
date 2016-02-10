@@ -4,7 +4,7 @@
 ## Add the yum repo
 
 ```bash
-$ sudo tee /etc/yum.repos.d/docker.repo <<-'EOF'
+$ sudo tee /etc/yum.repos.d/nginx.repo <<-'EOF'
 [nginxrepo]
 name=nginx repo
 baseurl=http://nginx.org/packages/centos/$releasever/$basearch/
